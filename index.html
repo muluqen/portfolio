@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muluken Shiferaw | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">&lt;MS/&gt;</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Muluken <span class="highlight">Shiferaw</span></h1>
+                <p class="hero-tagline">Computer Engineering Student & <span class="typing-text" id="typingText"></span><span class="cursor">|</span></p>
+                <p class="hero-description">
+                    A passionate backend developer building meaningful web platforms 
+                    with modern technologies. Currently exploring Laravel, Vue, and Spring Boot.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/muluqen" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:mulukenshiferaw1221@gmail.com" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="assets/profile.jpg" alt="Muluken Shiferaw">
+                    <div class="image-border"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About <span class="highlight">Me</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm a Computer Engineering graduate from <strong>Addis Ababa Science and Technology University (AASTU)</strong>, 
+                        one of Ethiopia's leading specialized science and technology institutions. Founded in 2011, 
+                        AASTU has been at the forefront of advancing the country's scientific and technological capabilities.
+                    </p>
+                    <p>
+                        My journey in tech started with curiosity about how things work, and it has evolved into a passion 
+                        for building functional, impactful web platforms. I enjoy learning by doing, questioning how things work, 
+                        and building from scratch.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="stat-info">
+                                <h3>CGPA</h3>
+                                <p class="stat-value">3.51</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
+                            <div class="stat-info">
+                                <h3>National Exit Exam</h3>
+                                <p class="stat-value">77.50%</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon"><i class="fas fa-university"></i></div>
+                            <div class="stat-info">
+                                <h3>University</h3>
+                                <p class="stat-value">AASTU</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-university">
+                        <div class="university-badge">
+                            <img src="https://ethiopianlogos.com/logos/addis_ababa_science_and_technology_university/addis_ababa_science_and_technology_university.png" alt="AASTU Logo" class="university-logo">
+                            <div class="university-info">
+                                <h4>Addis Ababa Science and Technology University</h4>
+                                <p>Established 2011 | ISO Certified | ABET Accredited</p>
+                                <span class="university-motto">"University for Industry"</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+            <p class="section-subtitle">A selection of projects I've built to solve real problems</p>
+            
+            <div class="projects-grid">
+                <!-- Tutinium -->
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/muluqen/tutinium-api" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-gradient tutinium"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">Sanctum</span>
+                            <span class="tag">PHP</span>
+                        </div>
+                        <h3>Tutinium</h3>
+                        <p>The Periodic Table of Learning — A modern tutoring platform connecting tutors with parents. Features authentication, bookings, payments, messaging, and reviews.</p>
+                    </div>
+                </div>
+
+                <!-- Cafe System -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/muluqen/cafe-system" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-gradient cafe"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Vue 3</span>
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Flutter</span>
+                        </div>
+                        <h3>Cafe System</h3>
+                        <p>Full-stack cafe management system with Vue frontend, Laravel API backend, and Flutter mobile app. Manages menus, orders, tables, and staff.</p>
+                    </div>
+                </div>
+
+                <!-- Supermarket Template -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/muluqen/supermarket-template" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-gradient supermarket"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML/CSS</span>
+                        </div>
+                        <h3>Supermarket Template</h3>
+                        <p>Responsive supermarket website template with admin dashboard. Clean UI design for e-commerce applications.</p>
+                    </div>
+                </div>
+
+                <!-- Zeydrova -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/muluqen/zeydrova" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-gradient zeydrova"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Blade</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                        <h3>Zeydrova</h3>
+                        <p>A brand platform designed to elevate small businesses. Combines bold visual identity with a modular, scalable web platform.</p>
+                    </div>
+                </div>
+
+                <!-- FixFlow CBE -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/muluqen/fixflow-cbe" target="_blank" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-gradient fixflow"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Blade</span>
+                            <span class="tag">Laravel</span>
+                        </div>
+                        <h3>FixFlow CBE</h3>
+                        <p>A fix management system built with Laravel Blade. Streamlines repair workflows and tracking.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Tech <span class="highlight">Stack</span></h2>
+            <p class="section-subtitle">Technologies and tools I work with</p>
+            
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-php"></i>
+                    <span>PHP</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-laravel"></i>
+                    <span>Laravel</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-vuejs"></i>
+                    <span>Vue.js</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js-square"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-java"></i>
+                    <span>Java</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <span>MySQL</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-git-alt"></i>
+                    <span>Git</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-bootstrap"></i>
+                    <span>Bootstrap</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-node-js"></i>
+                    <span>Node.js</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Flutter</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-linux"></i>
+                    <span>Linux</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+            <p class="section-subtitle">Have a project in mind? Let's work together.</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <a href="mailto:mulukenshiferaw1221@gmail.com" class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>mulukenshiferaw1221@gmail.com</p>
+                        </div>
+                        <i class="fas fa-arrow-right contact-arrow"></i>
+                    </a>
+                    <a href="https://github.com/muluqen" target="_blank" class="contact-card">
+                        <div class="contact-icon"><i class="fab fa-github"></i></div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <p>github.com/muluqen</p>
+                        </div>
+                        <i class="fas fa-arrow-right contact-arrow"></i>
+                    </a>
+                    <a href="https://linkedin.com/" target="_blank" class="contact-card">
+                        <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <p>Connect with me</p>
+                        </div>
+                        <i class="fas fa-arrow-right contact-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Muluken Shiferaw. Built with passion.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/muluqen" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:mulukenshiferaw1221@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
