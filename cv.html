@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muluken Shiferaw — CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f5f5;
+            color: #1a1a2e;
+            line-height: 1.6;
+        }
+
+        .cv-page {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+        }
+
+        .cv-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 3px solid #7c3aed;
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        .cv-name {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1a1a2e;
+        }
+
+        .cv-title {
+            font-size: 1rem;
+            color: #7c3aed;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .cv-contact {
+            text-align: right;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        .cv-contact p { margin-bottom: 4px; }
+        .cv-contact a { color: #7c3aed; text-decoration: none; }
+
+        .cv-section {
+            margin-bottom: 28px;
+        }
+
+        .cv-section-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #7c3aed;
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 8px;
+            margin-bottom: 16px;
+        }
+
+        .cv-item {
+            margin-bottom: 18px;
+        }
+
+        .cv-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .cv-item-title {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .cv-item-date {
+            font-size: 0.8rem;
+            color: #888;
+            font-weight: 500;
+        }
+
+        .cv-item-subtitle {
+            font-size: 0.9rem;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .cv-item-location {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .cv-item p {
+            font-size: 0.88rem;
+            color: #444;
+            margin-top: 6px;
+        }
+
+        .cv-item ul {
+            margin-top: 6px;
+            padding-left: 20px;
+        }
+
+        .cv-item li {
+            font-size: 0.88rem;
+            color: #444;
+            margin-bottom: 4px;
+        }
+
+        .cv-skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .cv-skill-group h4 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .cv-skill-group p {
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        .cv-stats {
+            display: flex;
+            gap: 24px;
+            margin-top: 8px;
+        }
+
+        .cv-stat {
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        .cv-stat strong {
+            color: #1a1a2e;
+        }
+
+        @media print {
+            body { background: white; }
+            .cv-page {
+                margin: 0;
+                box-shadow: none;
+                padding: 40px;
+            }
+            .no-print { display: none; }
+        }
+
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #7c3aed;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(124,58,237,0.4);
+            z-index: 100;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .print-btn:hover {
+            background: #6d28d9;
+        }
+    </style>
+</head>
+<body>
+
+<button class="print-btn no-print" onclick="window.print()">⬇ Download as PDF</button>
+
+<div class="cv-page">
+
+    <!-- Header -->
+    <div class="cv-header">
+        <div>
+            <h1 class="cv-name">Muluken Shiferaw</h1>
+            <p class="cv-title">Computer Engineering Graduate | Backend Developer</p>
+        </div>
+        <div class="cv-contact">
+            <p>mulukenshiferaw1221@gmail.com</p>
+            <p>github.com/muluqen</p>
+            <p>Addis Ababa, Ethiopia</p>
+        </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="cv-section">
+        <h2 class="cv-section-title">Professional Summary</h2>
+        <p style="font-size: 0.9rem; color: #444;">
+            Computer Engineering graduate from Addis Ababa Science and Technology University (AASTU) with a CGPA of 3.51. 
+            Passionate backend developer with hands-on experience building full-stack web applications using Laravel, Vue.js, 
+            and PostgreSQL. Skilled in REST API development, authentication systems, and database design. 
+            Eager to contribute to meaningful projects and continuously expand technical expertise.
+        </p>
+    </div>
+
+    <!-- Education -->
+    <div class="cv-section">
+        <h2 class="cv-section-title">Education</h2>
+        <div class="cv-item">
+            <div class="cv-item-header">
+                <div>
+                    <h3 class="cv-item-title">BSc in Computer Engineering</h3>
+                    <p class="cv-item-subtitle">Addis Ababa Science and Technology University (AASTU)</p>
+                </div>
+                <span class="cv-item-date">2021 – 2026</span>
+            </div>
+            <div class="cv-stats">
+                <span class="cv-stat"><strong>CGPA:</strong> 3.51 / 4.0</span>
+                <span class="cv-stat"><strong>National Exit Exam:</strong> 77.50%</span>
+            </div>
+            <p style="font-size: 0.85rem; color: #666; margin-top: 6px;">
+                ISO Certified | ABET Accredited | Established 2011
+            </p>
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="cv-section">
+        <h2 class="cv-section-title">Technical Skills</h2>
+        <div class="cv-skills-grid">
+            <div class="cv-skill-group">
+                <h4>Languages</h4>
+                <p>PHP, JavaScript, Java, Dart, HTML5, CSS3</p>
+            </div>
+            <div class="cv-skill-group">
+                <h4>Frameworks</h4>
+                <p>Laravel, Vue.js, Flutter, Node.js</p>
+            </div>
+            <div class="cv-skill-group">
+                <h4>Databases</h4>
+                <p>PostgreSQL, MySQL</p>
+            </div>
+            <div class="cv-skill-group">
+                <h4>Tools & Platforms</h4>
+                <p>Git, GitHub, Linux, Vite, Bootstrap</p>
+            </div>
+            <div class="cv-skill-group">
+                <h4>Other</h4>
+                <p>REST APIs, Blade Templating, Laravel Sanctum, Authentication</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="cv-section">
+        <h2 class="cv-section-title">Projects</h2>
+
+        <div class="cv-item">
+            <div class="cv-item-header">
+                <h3 class="cv-item-title">Tutinium — Tutoring Platform</h3>
+                <span class="cv-item-date">2026</span>
+            </div>
+            <ul>
+                <li>Full-stack web application connecting tutors with parents, built with Laravel 13 and PostgreSQL</li>
+                <li>Implemented secure authentication using Laravel Sanctum with role-based access</li>
+                <li>Developed RESTful API endpoints for bookings, payments, messaging, and reviews</li>
+                <li>Designed database schema for tutors, parents, sessions, and transactions</li>
+            </ul>
+            <p style="margin-top: 6px;"><strong>Tech:</strong> Laravel, PHP, PostgreSQL, Sanctum, Blade</p>
+        </div>
+
+        <div class="cv-item">
+            <div class="cv-item-header">
+                <h3 class="cv-item-title">Cafe System — Restaurant Management</h3>
+                <span class="cv-item-date">2026</span>
+            </div>
+            <ul>
+                <li>Full-stack cafe management platform with Vue 3 frontend and Laravel API backend</li>
+                <li>Integrated Flutter mobile app for on-the-go management</li>
+                <li>Managed 15 entities including orders, menus, tables, staff shifts, and inventory</li>
+                <li>Built with Vite for fast development and optimized builds</li>
+            </ul>
+            <p style="margin-top: 6px;"><strong>Tech:</strong> Vue 3, Laravel, Flutter, Vite, PostgreSQL</p>
+        </div>
+
+        <div class="cv-item">
+            <div class="cv-item-header">
+                <h3 class="cv-item-title">Supermarket Template — E-commerce UI</h3>
+                <span class="cv-item-date">2025</span>
+            </div>
+            <ul>
+                <li>Responsive supermarket website template with admin dashboard</li>
+                <li>Clean, modern UI design suitable for e-commerce applications</li>
+            </ul>
+            <p style="margin-top: 6px;"><strong>Tech:</strong> JavaScript, HTML5, CSS3</p>
+        </div>
+
+        <div class="cv-item">
+            <div class="cv-item-header">
+                <h3 class="cv-item-title">Zeydrova — Brand Platform</h3>
+                <span class="cv-item-date">2025</span>
+            </div>
+            <ul>
+                <li>Web platform designed to elevate small businesses with bold visual identity</li>
+                <li>Modular, scalable architecture built with Laravel Blade</li>
+            </ul>
+            <p style="margin-top: 6px;"><strong>Tech:</strong> Laravel Blade, CSS</p>
+        </div>
+
+        <div class="cv-item">
+            <div class="cv-item-header">
+                <h3 class="cv-item-title">FixFlow CBE — Repair Management</h3>
+                <span class="cv-item-date">2025</span>
+            </div>
+            <ul>
+                <li>Repair management system streamlining workflows and tracking</li>
+                <li>Most starred personal project on GitHub</li>
+            </ul>
+            <p style="margin-top: 6px;"><strong>Tech:</strong> Laravel Blade, PHP</p>
+        </div>
+    </div>
+
+    <!-- Interests -->
+    <div class="cv-section">
+        <h2 class="cv-section-title">Interests & Goals</h2>
+        <p style="font-size: 0.88rem; color: #444;">
+            Currently expanding into Java and Spring Boot for backend development. 
+            Passionate about building meaningful web platforms that solve real problems. 
+            Interested in API design, system architecture, and open-source contribution.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>
