@@ -3,371 +3,438 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muluken Shiferaw | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>MulukenOS | Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">&lt;MS/&gt;</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+    <!-- BOOT SCREEN -->
+    <div class="boot-screen" id="bootScreen">
+        <div class="boot-text">
+            <p class="boot-line">[  OK  ] Started MulukenOS.</p>
+            <p class="boot-line">[  OK  ] Reached target Graphical Interface.</p>
+            <p class="boot-line">[  OK  ] Started Portfolio Service.</p>
+            <p class="boot-line">[  OK  ] Started Creative Mode.</p>
+            <p class="boot-line">[  OK  ] Loaded Developer Profile.</p>
+            <p class="boot-line">Loading desktop...</p>
         </div>
-    </nav>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-bg">
-            <div class="hero-gradient"></div>
-            <div class="hero-grid"></div>
+    <!-- LINUX DESKTOP -->
+    <div class="desktop" id="desktop">
+        
+        <!-- TOP BAR -->
+        <div class="topbar">
+            <div class="topbar-left">
+                <span class="topbar-logo"><i class="fab fa-linux"></i> MulukenOS</span>
+                <span class="topbar-sep">|</span>
+                <span class="topbar-workspace active">1</span>
+                <span class="topbar-workspace">2</span>
+                <span class="topbar-workspace">3</span>
+            </div>
+            <div class="topbar-center" id="topbarCenter">
+                <span class="topbar-title">Desktop</span>
+            </div>
+            <div class="topbar-right">
+                <span class="topbar-tray"><i class="fas fa-wifi"></i></span>
+                <span class="topbar-tray"><i class="fas fa-volume-up"></i></span>
+                <span class="topbar-tray"><i class="fas fa-battery-full"></i></span>
+                <span class="topbar-clock" id="clock"></span>
+            </div>
         </div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="hero-greeting">Hello, I'm</p>
-                <h1 class="hero-name">Muluken <span class="highlight">Shiferaw</span></h1>
-                <p class="hero-tagline">Computer Engineering Student & <span class="typing-text" id="typingText"></span><span class="cursor">|</span></p>
-                <p class="hero-description">
-                    A passionate backend developer building meaningful web platforms 
-                    with modern technologies. Currently exploring Laravel, Vue, and Spring Boot.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="cv.html" target="_blank" class="btn btn-outline"><i class="fas fa-download"></i> Download CV</a>
+
+        <!-- DESKTOP CONTENT -->
+        <div class="desktop-content">
+        <!-- CONKY WIDGET -->
+        <div class="conky">
+            <div class="conky-header">
+                <img src="assets/profile.jpg" alt="Muluken" class="conky-avatar">
+                <h3>Muluken Shiferaw</h3>
+                <p class="conky-role">Electrical & Computer Engineer</p>
+            </div>
+            <div class="conky-stats">
+                <div class="conky-stat">
+                    <span class="conky-label">CGPA</span>
+                    <div class="conky-bar"><div class="conky-fill" style="width: 88%"></div></div>
+                    <span class="conky-value">3.51</span>
                 </div>
-                <div class="hero-socials">
-                    <a href="https://github.com/muluqen" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:mulukenshiferaw1221@gmail.com" aria-label="Email">
+                <div class="conky-stat">
+                    <span class="conky-label">EXAM</span>
+                    <div class="conky-bar"><div class="conky-fill" style="width: 78%"></div></div>
+                    <span class="conky-value">77.5%</span>
+                </div>
+                <div class="conky-stat">
+                    <span class="conky-label">PROJ</span>
+                    <div class="conky-bar"><div class="conky-fill" style="width: 60%"></div></div>
+                    <span class="conky-value">5+</span>
+                </div>
+            </div>
+            <div class="conky-info">
+                <p><span>Uptime:</span> <span id="uptime">0h 0m</span></p>
+                <p><span>Kernel:</span> <span>muluken-6.0-generic</span></p>
+                <p><span>Shell:</span> <span>bash 5.2.0</span></p>
+                <p><span>WM:</span> <span>Hyprland</span></p>
+                <p><span>Theme:</span> <span>MulukenOS-Dark</span></p>
+                <p><span>Apps:</span> <span>5 projects loaded</span></p>
+            </div>
+        </div>
+
+            <!-- DESKTOP ICONS -->
+            <div class="desktop-icons">
+                <div class="desktop-icon" onclick="openApp('terminal')">
+                    <div class="icon-img"><i class="fas fa-terminal"></i></div>
+                    <span>Terminal</span>
+                </div>
+                <div class="desktop-icon" onclick="openApp('about')">
+                    <div class="icon-img"><i class="fas fa-user"></i></div>
+                    <span>About</span>
+                </div>
+                <div class="desktop-icon" onclick="openApp('projects')">
+                    <div class="icon-img"><i class="fas fa-folder"></i></div>
+                    <span>Projects</span>
+                </div>
+                <div class="desktop-icon" onclick="openApp('skills')">
+                    <div class="icon-img"><i class="fas fa-code"></i></div>
+                    <span>Skills</span>
+                </div>
+                <div class="desktop-icon" onclick="openApp('experience')">
+                    <div class="icon-img"><i class="fas fa-briefcase"></i></div>
+                    <span>Experience</span>
+                </div>
+                <div class="desktop-icon" onclick="openApp('certificates')">
+                    <div class="icon-img"><i class="fas fa-certificate"></i></div>
+                    <span>Certificates</span>
+                </div>
+                <div class="desktop-icon" onclick="openApp('contact')">
+                    <div class="icon-img"><i class="fas fa-envelope"></i></div>
+                    <span>Contact</span>
+                </div>
+                <div class="desktop-icon" onclick="window.open('cv.html','_blank')">
+                    <div class="icon-img"><i class="fas fa-file-alt"></i></div>
+                    <span>CV</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- TERMINAL -->
+        <div class="terminal" id="app-terminal">
+            <div class="terminal-header" onmousedown="startDrag(event, 'app-terminal')">
+                <div class="terminal-dots">
+                    <span class="dot-red"></span>
+                    <span class="dot-yellow"></span>
+                    <span class="dot-green"></span>
+                </div>
+                <span class="terminal-title">muluken@MulukenOS: ~</span>
+                <div class="terminal-controls">
+                    <button onclick="minimizeApp('terminal')"><i class="fas fa-minus"></i></button>
+                    <button onclick="maximizeApp('terminal')"><i class="fas fa-expand"></i></button>
+                    <button onclick="closeApp('terminal')"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="terminal-body" id="terminalBody">
+                <div class="terminal-output" id="terminalOutput"></div>
+                <div class="terminal-input-line">
+                    <span class="terminal-prompt">muluken@MulukenOS:~$</span>
+                    <input type="text" class="terminal-input" id="terminalInput" autofocus>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT APP -->
+        <div class="app-window" id="app-about">
+            <div class="app-header" onmousedown="startDrag(event, 'app-about')">
+                <span class="app-title"><i class="fas fa-user"></i> About Me</span>
+                <div class="app-controls">
+                    <button onclick="minimizeApp('about')"><i class="fas fa-minus"></i></button>
+                    <button onclick="maximizeApp('about')"><i class="fas fa-expand"></i></button>
+                    <button onclick="closeApp('about')"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="app-body">
+                <div class="about-section">
+                    <div class="about-left">
+                        <img src="assets/profile.jpg" alt="Muluken" class="about-avatar">
+                        <h2>Muluken Shiferaw</h2>
+                        <p class="about-role">Electrical & Computer Engineer</p>
+                        <div class="about-tags">
+                            <span>Backend</span>
+                            <span>Laravel</span>
+                            <span>Vue.js</span>
+                        </div>
+                    </div>
+                    <div class="about-right">
+                        <p>Computer Engineering graduate with strong problem-solving skills. Developed multiple web projects using AI-assisted development (Claude, ChatGPT, GitHub Copilot). Focused on understanding systems architecture and delivering functional solutions.</p>
+                        <p>Learning Laravel, Vue.js, and exploring Spring Boot. Using AI tools to accelerate development while building understanding of the codebase.</p>
+                        <div class="about-stats">
+                            <div class="stat-box"><span>3.51</span><small>CGPA</small></div>
+                            <div class="stat-box"><span>77.5%</span><small>Exit Exam</small></div>
+                            <div class="stat-box"><span>5+</span><small>Projects</small></div>
+                        </div>
+                        <div class="about-edu">
+                            <img src="https://ethiopianlogos.com/logos/addis_ababa_science_and_technology_university/addis_ababa_science_and_technology_university.png" alt="AASTU">
+                            <div>
+                                <strong>AASTU</strong>
+                                <small>Addis Ababa Science & Technology University</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECTS APP -->
+        <div class="app-window" id="app-projects">
+            <div class="app-header" onmousedown="startDrag(event, 'app-projects')">
+                <span class="app-title"><i class="fas fa-folder"></i> Projects</span>
+                <div class="app-controls">
+                    <button onclick="minimizeApp('projects')"><i class="fas fa-minus"></i></button>
+                    <button onclick="maximizeApp('projects')"><i class="fas fa-expand"></i></button>
+                    <button onclick="closeApp('projects')"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="app-body">
+                <div class="file-manager">
+                    <div class="file-grid">
+                        <a href="https://github.com/muluqen/tutinium-api" target="_blank" class="file-item">
+                            <div class="file-icon" style="background: linear-gradient(135deg, #1e1b4b, #4338ca);"><i class="fas fa-graduation-cap"></i></div>
+                            <span>Tutinium</span>
+                            <small>Laravel, PostgreSQL</small>
+                        </a>
+                        <a href="https://github.com/muluqen/cafe-system" target="_blank" class="file-item">
+                            <div class="file-icon" style="background: linear-gradient(135deg, #0c4a6e, #0ea5e9);"><i class="fas fa-coffee"></i></div>
+                            <span>Cafe System</span>
+                            <small>Vue 3, Laravel, Flutter</small>
+                        </a>
+                        <a href="https://github.com/muluqen/fixflow-cbe" target="_blank" class="file-item">
+                            <div class="file-icon" style="background: linear-gradient(135deg, #581c87, #a78bfa);"><i class="fas fa-wrench"></i></div>
+                            <span>FixFlow CBE</span>
+                            <small>Laravel Blade</small>
+                        </a>
+                        <a href="https://github.com/muluqen/zeydrova" target="_blank" class="file-item">
+                            <div class="file-icon" style="background: linear-gradient(135deg, #7c2d12, #ea580c);"><i class="fas fa-palette"></i></div>
+                            <span>Zeydrova</span>
+                            <small>Blade, CSS</small>
+                        </a>
+                        <a href="https://github.com/muluqen/supermarket-template" target="_blank" class="file-item">
+                            <div class="file-icon" style="background: linear-gradient(135deg, #064e3b, #059669);"><i class="fas fa-shopping-cart"></i></div>
+                            <span>Supermarket</span>
+                            <small>JavaScript, HTML/CSS</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SKILLS APP -->
+        <div class="app-window" id="app-skills">
+            <div class="app-header" onmousedown="startDrag(event, 'app-skills')">
+                <span class="app-title"><i class="fas fa-code"></i> Skills</span>
+                <div class="app-controls">
+                    <button onclick="minimizeApp('skills')"><i class="fas fa-minus"></i></button>
+                    <button onclick="maximizeApp('skills')"><i class="fas fa-expand"></i></button>
+                    <button onclick="closeApp('skills')"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="app-body">
+                <div class="skills-view">
+                    <div class="skill-group">
+                        <h4><i class="fas fa-tools"></i> Tools I Use</h4>
+                        <div class="skill-chips">
+                            <span>Git</span><span>GitHub</span><span>Linux</span><span>Postman</span><span>VS Code</span><span>Browser DevTools</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4><i class="fas fa-robot"></i> AI-Assisted Development</h4>
+                        <div class="skill-chips">
+                            <span>Claude</span><span>ChatGPT</span><span>GitHub Copilot</span><span>Codex</span><span>Antigravity</span><span>OpenCode</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4><i class="fas fa-lightbulb"></i> Soft Skills</h4>
+                        <div class="skill-chips">
+                            <span>Problem Solving</span><span>Critical Thinking</span><span>Fast Learner</span><span>Team Work</span><span>Adaptability</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4><i class="fas fa-graduation-cap"></i> Engineering Knowledge</h4>
+                        <div class="skill-chips">
+                            <span>System Design</span><span>Requirements Gathering</span><span>Testing & Debugging</span><span>Documentation</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4><i class="fas fa-eye"></i> Exposure To (Via AI Projects)</h4>
+                        <div class="skill-chips muted">
+                            <span>PHP</span><span>Laravel</span><span>Vue.js</span><span>JavaScript</span><span>PostgreSQL</span><span>MySQL</span><span>Flutter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXPERIENCE APP -->
+        <div class="app-window" id="app-experience">
+            <div class="app-header" onmousedown="startDrag(event, 'app-experience')">
+                <span class="app-title"><i class="fas fa-briefcase"></i> Experience</span>
+                <div class="app-controls">
+                    <button onclick="minimizeApp('experience')"><i class="fas fa-minus"></i></button>
+                    <button onclick="maximizeApp('experience')"><i class="fas fa-expand"></i></button>
+                    <button onclick="closeApp('experience')"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="app-body">
+                <div class="exp-view">
+                    <div class="exp-item">
+                        <div class="exp-dot"></div>
+                        <div class="exp-content">
+                            <h4>Software Development Intern</h4>
+                            <p class="exp-company">ITDB (Information Technology Development Bureau)</p>
+                            <p class="exp-date">2024 | Addis Ababa</p>
+                            <ul>
+                                <li>Backend development on a real product team</li>
+                                <li>Wired frontend components to the API</li>
+                                <li>Learned what it means to write maintainable code</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="exp-item">
+                        <div class="exp-dot"></div>
+                        <div class="exp-content">
+                            <h4>Network Engineering Intern</h4>
+                            <p class="exp-company">CBE (Commercial Bank of Ethiopia)</p>
+                            <p class="exp-date">2024 | Addis Ababa</p>
+                            <ul>
+                                <li>Configured IP addresses, routing and switching</li>
+                                <li>Troubleshot connectivity problems on live network</li>
+                                <li>Got clear picture of large-scale infrastructure</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CERTIFICATES APP -->
+        <div class="app-window" id="app-certificates">
+            <div class="app-header" onmousedown="startDrag(event, 'app-certificates')">
+                <span class="app-title"><i class="fas fa-certificate"></i> Certificates</span>
+                <div class="app-controls">
+                    <button onclick="minimizeApp('certificates')"><i class="fas fa-minus"></i></button>
+                    <button onclick="maximizeApp('certificates')"><i class="fas fa-expand"></i></button>
+                    <button onclick="closeApp('certificates')"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="app-body">
+                <div class="cert-view">
+                    <div class="cert-item"><i class="fas fa-chart-bar"></i><div><strong>Data Analysis</strong><span>5 Million Coders Initiative</span></div></div>
+                    <div class="cert-item"><i class="fas fa-laptop"></i><div><strong>e-SHE Digital Suite</strong><span>Ministry of Education, Ethiopia</span></div></div>
+                    <div class="cert-item"><i class="fas fa-book-open"></i><div><strong>Online Learning Strategies</strong></div></div>
+                    <div class="cert-item"><i class="fas fa-shield-alt"></i><div><strong>Cybersecurity Basics</strong></div></div>
+                    <div class="cert-item"><i class="fas fa-check-circle"></i><div><strong>Academic Integrity</strong></div></div>
+                    <div class="cert-item"><i class="fas fa-clock"></i><div><strong>Time & Goal Management</strong></div></div>
+                    <div class="cert-item"><i class="fas fa-search"></i><div><strong>Resource Evaluation</strong></div></div>
+                    <div class="cert-item"><i class="fas fa-brain"></i><div><strong>Effective Study Methods</strong></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT APP -->
+        <div class="app-window" id="app-contact">
+            <div class="app-header" onmousedown="startDrag(event, 'app-contact')">
+                <span class="app-title"><i class="fas fa-envelope"></i> Contact</span>
+                <div class="app-controls">
+                    <button onclick="minimizeApp('contact')"><i class="fas fa-minus"></i></button>
+                    <button onclick="maximizeApp('contact')"><i class="fas fa-expand"></i></button>
+                    <button onclick="closeApp('contact')"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="app-body">
+                <div class="contact-view">
+                    <a href="mailto:mulukenshiferaw1221@gmail.com" class="contact-item">
                         <i class="fas fa-envelope"></i>
+                        <div><strong>Email</strong><span>mulukenshiferaw1221@gmail.com</span></div>
                     </a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-wrapper">
-                    <img src="assets/profile.jpg" alt="Muluken Shiferaw">
-                    <div class="image-border"></div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll Down</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title">About <span class="highlight">Me</span></h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        I'm a Computer Engineering graduate from <strong>Addis Ababa Science and Technology University (AASTU)</strong>, 
-                        one of Ethiopia's leading specialized science and technology institutions. Founded in 2011, 
-                        AASTU has been at the forefront of advancing the country's scientific and technological capabilities.
-                    </p>
-                    <p>
-                        My journey in tech started with curiosity about how things work, and it has evolved into a passion 
-                        for building functional, impactful web platforms. I enjoy learning by doing, questioning how things work, 
-                        and building from scratch.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-card">
-                            <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
-                            <div class="stat-info">
-                                <h3>CGPA</h3>
-                                <p class="stat-value">3.51</p>
-                            </div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-icon"><i class="fas fa-file-alt"></i></div>
-                            <div class="stat-info">
-                                <h3>National Exit Exam</h3>
-                                <p class="stat-value">77.50%</p>
-                            </div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-icon"><i class="fas fa-university"></i></div>
-                            <div class="stat-info">
-                                <h3>University</h3>
-                                <p class="stat-value">AASTU</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-university">
-                        <div class="university-badge">
-                            <img src="https://ethiopianlogos.com/logos/addis_ababa_science_and_technology_university/addis_ababa_science_and_technology_university.png" alt="AASTU Logo" class="university-logo">
-                            <div class="university-info">
-                                <h4>Addis Ababa Science and Technology University</h4>
-                                <p>Established 2011 | ISO Certified | ABET Accredited</p>
-                                <span class="university-motto">"University for Industry"</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
-            <p class="section-subtitle">A selection of projects I've built to solve real problems</p>
-            
-            <div class="projects-grid">
-                <!-- Tutinium -->
-                <div class="project-card featured">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/muluqen/tutinium-api" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-gradient tutinium"></div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">Laravel</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">Sanctum</span>
-                            <span class="tag">PHP</span>
-                        </div>
-                        <h3>Tutinium</h3>
-                        <p>The Periodic Table of Learning — A modern tutoring platform connecting tutors with parents. Features authentication, bookings, payments, messaging, and reviews.</p>
-                    </div>
-                </div>
-
-                <!-- Cafe System -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/muluqen/cafe-system" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-gradient cafe"></div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">Vue 3</span>
-                            <span class="tag">Laravel</span>
-                            <span class="tag">Flutter</span>
-                        </div>
-                        <h3>Cafe System</h3>
-                        <p>Full-stack cafe management system with Vue frontend, Laravel API backend, and Flutter mobile app. Manages menus, orders, tables, and staff.</p>
-                    </div>
-                </div>
-
-                <!-- Supermarket Template -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/muluqen/supermarket-template" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-gradient supermarket"></div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">HTML/CSS</span>
-                        </div>
-                        <h3>Supermarket Template</h3>
-                        <p>Responsive supermarket website template with admin dashboard. Clean UI design for e-commerce applications.</p>
-                    </div>
-                </div>
-
-                <!-- Zeydrova -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/muluqen/zeydrova" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-gradient zeydrova"></div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">Blade</span>
-                            <span class="tag">CSS</span>
-                        </div>
-                        <h3>Zeydrova</h3>
-                        <p>A brand platform designed to elevate small businesses. Combines bold visual identity with a modular, scalable web platform.</p>
-                    </div>
-                </div>
-
-                <!-- FixFlow CBE -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/muluqen/fixflow-cbe" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-gradient fixflow"></div>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-tags">
-                            <span class="tag">Blade</span>
-                            <span class="tag">Laravel</span>
-                        </div>
-                        <h3>FixFlow CBE</h3>
-                        <p>A fix management system built with Laravel Blade. Streamlines repair workflows and tracking.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <div class="container">
-            <h2 class="section-title">Tech <span class="highlight">Stack</span></h2>
-            <p class="section-subtitle">Technologies and tools I work with</p>
-            
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <i class="fab fa-php"></i>
-                    <span>PHP</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-laravel"></i>
-                    <span>Laravel</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-vuejs"></i>
-                    <span>Vue.js</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-js-square"></i>
-                    <span>JavaScript</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-html5"></i>
-                    <span>HTML5</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-css3-alt"></i>
-                    <span>CSS3</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-java"></i>
-                    <span>Java</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-database"></i>
-                    <span>PostgreSQL</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-database"></i>
-                    <span>MySQL</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-git-alt"></i>
-                    <span>Git</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-bootstrap"></i>
-                    <span>Bootstrap</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-node-js"></i>
-                    <span>Node.js</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-mobile-alt"></i>
-                    <span>Flutter</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-linux"></i>
-                    <span>Linux</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
-            <p class="section-subtitle">Have a project in mind? Let's work together.</p>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <a href="mailto:mulukenshiferaw1221@gmail.com" class="contact-card">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p>mulukenshiferaw1221@gmail.com</p>
-                        </div>
-                        <i class="fas fa-arrow-right contact-arrow"></i>
+                    <a href="tel:0961012353" class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div><strong>Phone</strong><span>0961012353</span></div>
                     </a>
-                    <a href="https://github.com/muluqen" target="_blank" class="contact-card">
-                        <div class="contact-icon"><i class="fab fa-github"></i></div>
-                        <div class="contact-details">
-                            <h3>GitHub</h3>
-                            <p>github.com/muluqen</p>
-                        </div>
-                        <i class="fas fa-arrow-right contact-arrow"></i>
+                    <a href="https://t.me/mulukenshiferaw" target="_blank" class="contact-item">
+                        <i class="fab fa-telegram"></i>
+                        <div><strong>Telegram</strong><span>@mulukenshiferaw</span></div>
                     </a>
-                    <a href="https://linkedin.com/" target="_blank" class="contact-card">
-                        <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
-                        <div class="contact-details">
-                            <h3>LinkedIn</h3>
-                            <p>Connect with me</p>
-                        </div>
-                        <i class="fas fa-arrow-right contact-arrow"></i>
+                    <a href="https://github.com/muluqen" target="_blank" class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div><strong>GitHub</strong><span>github.com/muluqen</span></div>
                     </a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2026 Muluken Shiferaw. Built with passion.</p>
-                <div class="footer-links">
-                    <a href="https://github.com/muluqen" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:mulukenshiferaw1221@gmail.com"><i class="fas fa-envelope"></i></a>
+        <!-- ROFI LAUNCHER -->
+        <div class="rofi" id="rofi">
+            <div class="rofi-search">
+                <i class="fas fa-search"></i>
+                <input type="text" id="rofiInput" placeholder="Search apps..." oninput="filterRofi()">
+            </div>
+            <div class="rofi-list" id="rofiList">
+                <div class="rofi-item" onclick="openApp('terminal'); toggleRofi();">
+                    <i class="fas fa-terminal"></i><span>Terminal</span>
+                </div>
+                <div class="rofi-item" onclick="openApp('about'); toggleRofi();">
+                    <i class="fas fa-user"></i><span>About Me</span>
+                </div>
+                <div class="rofi-item" onclick="openApp('projects'); toggleRofi();">
+                    <i class="fas fa-folder"></i><span>Projects</span>
+                </div>
+                <div class="rofi-item" onclick="openApp('skills'); toggleRofi();">
+                    <i class="fas fa-code"></i><span>Skills</span>
+                </div>
+                <div class="rofi-item" onclick="openApp('experience'); toggleRofi();">
+                    <i class="fas fa-briefcase"></i><span>Experience</span>
+                </div>
+                <div class="rofi-item" onclick="openApp('certificates'); toggleRofi();">
+                    <i class="fas fa-certificate"></i><span>Certificates</span>
+                </div>
+                <div class="rofi-item" onclick="openApp('contact'); toggleRofi();">
+                    <i class="fas fa-envelope"></i><span>Contact</span>
+                </div>
+                <div class="rofi-item" onclick="window.open('cv.html','_blank'); toggleRofi();">
+                    <i class="fas fa-file-alt"></i><span>Download CV</span>
                 </div>
             </div>
         </div>
-    </footer>
+
+        <!-- BOTTOM DOCK -->
+        <div class="dock">
+            <div class="dock-item active" onclick="toggleRofi()" title="Applications">
+                <i class="fab fa-linux"></i>
+            </div>
+            <div class="dock-separator"></div>
+            <div class="dock-item" onclick="openApp('terminal')" title="Terminal">
+                <i class="fas fa-terminal"></i>
+            </div>
+            <div class="dock-item" onclick="openApp('about')" title="About">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="dock-item" onclick="openApp('projects')" title="Projects">
+                <i class="fas fa-folder"></i>
+            </div>
+            <div class="dock-item" onclick="openApp('skills')" title="Skills">
+                <i class="fas fa-code"></i>
+            </div>
+            <div class="dock-item" onclick="openApp('contact')" title="Contact">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="dock-separator"></div>
+            <div class="dock-item" onclick="window.open('cv.html','_blank')" title="CV">
+                <i class="fas fa-file-alt"></i>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

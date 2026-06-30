@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muluken Shiferaw — CV</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -98,11 +99,6 @@
             font-weight: 500;
         }
 
-        .cv-item-location {
-            font-size: 0.8rem;
-            color: #888;
-        }
-
         .cv-item p {
             font-size: 0.88rem;
             color: #444;
@@ -152,6 +148,20 @@
             color: #1a1a2e;
         }
 
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        .expertise-tag {
+            font-size: 0.85rem;
+            color: #444;
+            padding: 6px 12px;
+            background: #f8f8f8;
+            border-radius: 4px;
+        }
+
         @media print {
             body { background: white; }
             .cv-page {
@@ -194,23 +204,26 @@
     <div class="cv-header">
         <div>
             <h1 class="cv-name">Muluken Shiferaw</h1>
-            <p class="cv-title">Computer Engineering Graduate | Backend Developer</p>
+            <p class="cv-title">Electrical and Computer Engineer</p>
         </div>
         <div class="cv-contact">
             <p>mulukenshiferaw1221@gmail.com</p>
+            <p>0961012353</p>
+            <p>@mulukenshiferaw (Telegram)</p>
             <p>github.com/muluqen</p>
+            <p>muluken.muluken-shiferaw.workers.dev</p>
             <p>Addis Ababa, Ethiopia</p>
         </div>
     </div>
 
-    <!-- Summary -->
+    <!-- About -->
     <div class="cv-section">
-        <h2 class="cv-section-title">Professional Summary</h2>
+        <h2 class="cv-section-title">About</h2>
         <p style="font-size: 0.9rem; color: #444;">
-            Computer Engineering graduate from Addis Ababa Science and Technology University (AASTU) with a CGPA of 3.51. 
-            Passionate backend developer with hands-on experience building full-stack web applications using Laravel, Vue.js, 
-            and PostgreSQL. Skilled in REST API development, authentication systems, and database design. 
-            Eager to contribute to meaningful projects and continuously expand technical expertise.
+            Computer Engineering graduate with strong problem-solving skills and a passion for learning. 
+            Developed multiple web projects including a tutoring platform, cafe management system, and repair tracking tool 
+            using AI-assisted development (Claude, ChatGPT, GitHub Copilot, Codex, Antigravity, OpenCode). 
+            Focused on understanding systems architecture, requirements gathering, and delivering functional solutions.
         </p>
     </div>
 
@@ -220,18 +233,54 @@
         <div class="cv-item">
             <div class="cv-item-header">
                 <div>
-                    <h3 class="cv-item-title">BSc in Computer Engineering</h3>
+                    <h3 class="cv-item-title">BSc in Electrical and Computer Engineering</h3>
                     <p class="cv-item-subtitle">Addis Ababa Science and Technology University (AASTU)</p>
                 </div>
-                <span class="cv-item-date">2021 – 2026</span>
+                <span class="cv-item-date">2025/26</span>
             </div>
             <div class="cv-stats">
                 <span class="cv-stat"><strong>CGPA:</strong> 3.51 / 4.0</span>
-                <span class="cv-stat"><strong>National Exit Exam:</strong> 77.50%</span>
+                <span class="cv-stat"><strong>National Exit Exam:</strong> 77.5%</span>
             </div>
             <p style="font-size: 0.85rem; color: #666; margin-top: 6px;">
-                ISO Certified | ABET Accredited | Established 2011
+                Graduated with Great Distinction
             </p>
+        </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="cv-section">
+        <h2 class="cv-section-title">Experience</h2>
+        <div class="cv-item">
+            <div class="cv-item-header">
+                <div>
+                    <h3 class="cv-item-title">Software Development Intern</h3>
+                    <p class="cv-item-subtitle">ITDB (Information Technology Development Bureau)</p>
+                </div>
+                <span class="cv-item-date">2024</span>
+            </div>
+            <p class="cv-item-location">Addis Ababa</p>
+            <ul>
+                <li>Backend development on a real product team — actual features shipping.</li>
+                <li>Wired frontend components to the API, sorted out database issues.</li>
+                <li>Learned what it means to write code other people have to maintain.</li>
+            </ul>
+        </div>
+
+        <div class="cv-item">
+            <div class="cv-item-header">
+                <div>
+                    <h3 class="cv-item-title">Network Engineering Intern</h3>
+                    <p class="cv-item-subtitle">CBE (Commercial Bank of Ethiopia)</p>
+                </div>
+                <span class="cv-item-date">2024</span>
+            </div>
+            <p class="cv-item-location">Addis Ababa</p>
+            <ul>
+                <li>Configured IP addresses, routing and switching across bank branches — hands-on.</li>
+                <li>Troubleshot real connectivity problems on a live network.</li>
+                <li>Got clear picture of how large-scale infrastructure runs day-to-day.</li>
+            </ul>
         </div>
     </div>
 
@@ -240,105 +289,111 @@
         <h2 class="cv-section-title">Technical Skills</h2>
         <div class="cv-skills-grid">
             <div class="cv-skill-group">
-                <h4>Languages</h4>
-                <p>PHP, JavaScript, Java, Dart, HTML5, CSS3</p>
+                <h4>Tools I Use</h4>
+                <p>Git, GitHub, Linux, Postman, VS Code</p>
             </div>
             <div class="cv-skill-group">
-                <h4>Frameworks</h4>
-                <p>Laravel, Vue.js, Flutter, Node.js</p>
+                <h4>AI-Assisted Development</h4>
+                <p>Claude, ChatGPT, GitHub Copilot, Codex, Antigravity, OpenCode</p>
             </div>
             <div class="cv-skill-group">
-                <h4>Databases</h4>
-                <p>PostgreSQL, MySQL</p>
+                <h4>Engineering Skills</h4>
+                <p>Problem Solving, System Design, Testing & Debugging</p>
             </div>
             <div class="cv-skill-group">
-                <h4>Tools & Platforms</h4>
-                <p>Git, GitHub, Linux, Vite, Bootstrap</p>
+                <h4>Soft Skills</h4>
+                <p>Critical Thinking, Fast Learner, Team Work, Adaptability</p>
             </div>
             <div class="cv-skill-group">
-                <h4>Other</h4>
-                <p>REST APIs, Blade Templating, Laravel Sanctum, Authentication</p>
+                <h4>Exposure To (Via AI Projects)</h4>
+                <p>PHP, Laravel, Vue.js, JavaScript, PostgreSQL, MySQL, Flutter</p>
             </div>
+        </div>
+    </div>
+
+    <!-- Expertise -->
+    <div class="cv-section">
+        <h2 class="cv-section-title">Expertise</h2>
+        <div class="expertise-grid">
+            <span class="expertise-tag">Team Work</span>
+            <span class="expertise-tag">Adaptability</span>
+            <span class="expertise-tag">Critical Thinking</span>
+            <span class="expertise-tag">Problem Solving</span>
+            <span class="expertise-tag">Fast Learner</span>
+            <span class="expertise-tag">Attention to Detail</span>
         </div>
     </div>
 
     <!-- Projects -->
     <div class="cv-section">
-        <h2 class="cv-section-title">Projects</h2>
+        <h2 class="cv-section-title">Projects (AI-Assisted Development)</h2>
 
         <div class="cv-item">
             <div class="cv-item-header">
                 <h3 class="cv-item-title">Tutinium — Tutoring Platform</h3>
-                <span class="cv-item-date">2026</span>
             </div>
+            <p style="font-size: 0.85rem; color: #7c3aed; margin-top: 4px;">Laravel 13, PHP, PostgreSQL, Laravel Sanctum</p>
             <ul>
-                <li>Full-stack web application connecting tutors with parents, built with Laravel 13 and PostgreSQL</li>
-                <li>Implemented secure authentication using Laravel Sanctum with role-based access</li>
-                <li>Developed RESTful API endpoints for bookings, payments, messaging, and reviews</li>
-                <li>Designed database schema for tutors, parents, sessions, and transactions</li>
+                <li>Connects tutors and parents — bookings, payments, messaging, reviews.</li>
+                <li>Full REST API with PostgreSQL and Sanctum auth.</li>
+                <li>Developed using AI tools (Claude, ChatGPT) for code generation and debugging.</li>
             </ul>
-            <p style="margin-top: 6px;"><strong>Tech:</strong> Laravel, PHP, PostgreSQL, Sanctum, Blade</p>
         </div>
 
         <div class="cv-item">
             <div class="cv-item-header">
                 <h3 class="cv-item-title">Cafe System — Restaurant Management</h3>
-                <span class="cv-item-date">2026</span>
             </div>
+            <p style="font-size: 0.85rem; color: #7c3aed; margin-top: 4px;">Vue 3, Laravel, Flutter, Vite</p>
             <ul>
-                <li>Full-stack cafe management platform with Vue 3 frontend and Laravel API backend</li>
-                <li>Integrated Flutter mobile app for on-the-go management</li>
-                <li>Managed 15 entities including orders, menus, tables, staff shifts, and inventory</li>
-                <li>Built with Vite for fast development and optimized builds</li>
+                <li>Vue 3 web + Laravel API + Flutter mobile, all integrated.</li>
+                <li>15 entities: orders, menus, tables, staff shifts, inventory.</li>
+                <li>AI-assisted development for rapid prototyping and implementation.</li>
             </ul>
-            <p style="margin-top: 6px;"><strong>Tech:</strong> Vue 3, Laravel, Flutter, Vite, PostgreSQL</p>
         </div>
 
         <div class="cv-item">
             <div class="cv-item-header">
-                <h3 class="cv-item-title">Supermarket Template — E-commerce UI</h3>
-                <span class="cv-item-date">2025</span>
+                <h3 class="cv-item-title">FixFlow CBE — Repair Management System</h3>
             </div>
+            <p style="font-size: 0.85rem; color: #7c3aed; margin-top: 4px;">Laravel, Blade</p>
             <ul>
-                <li>Responsive supermarket website template with admin dashboard</li>
-                <li>Clean, modern UI design suitable for e-commerce applications</li>
+                <li>Tracks repair jobs and workflows. Most starred repo on GitHub.</li>
+                <li>AI-assisted development for rapid implementation.</li>
             </ul>
-            <p style="margin-top: 6px;"><strong>Tech:</strong> JavaScript, HTML5, CSS3</p>
-        </div>
-
-        <div class="cv-item">
-            <div class="cv-item-header">
-                <h3 class="cv-item-title">Zeydrova — Brand Platform</h3>
-                <span class="cv-item-date">2025</span>
-            </div>
-            <ul>
-                <li>Web platform designed to elevate small businesses with bold visual identity</li>
-                <li>Modular, scalable architecture built with Laravel Blade</li>
-            </ul>
-            <p style="margin-top: 6px;"><strong>Tech:</strong> Laravel Blade, CSS</p>
-        </div>
-
-        <div class="cv-item">
-            <div class="cv-item-header">
-                <h3 class="cv-item-title">FixFlow CBE — Repair Management</h3>
-                <span class="cv-item-date">2025</span>
-            </div>
-            <ul>
-                <li>Repair management system streamlining workflows and tracking</li>
-                <li>Most starred personal project on GitHub</li>
-            </ul>
-            <p style="margin-top: 6px;"><strong>Tech:</strong> Laravel Blade, PHP</p>
         </div>
     </div>
 
-    <!-- Interests -->
+    <!-- Languages -->
     <div class="cv-section">
-        <h2 class="cv-section-title">Interests & Goals</h2>
-        <p style="font-size: 0.88rem; color: #444;">
-            Currently expanding into Java and Spring Boot for backend development. 
-            Passionate about building meaningful web platforms that solve real problems. 
-            Interested in API design, system architecture, and open-source contribution.
-        </p>
+        <h2 class="cv-section-title">Languages</h2>
+        <div class="cv-skills-grid">
+            <div class="cv-skill-group">
+                <h4>Amharic</h4>
+                <p>Native</p>
+            </div>
+            <div class="cv-skill-group">
+                <h4>English</h4>
+                <p>Professional</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certificates -->
+    <div class="cv-section">
+        <h2 class="cv-section-title">Certificates</h2>
+        <div class="cv-item">
+            <ul>
+                <li>Data Analysis — 5 Million Coders Initiative</li>
+                <li>e-SHE Digital Suite — Ministry of Education, Ethiopia</li>
+                <li>Online Learning Strategies</li>
+                <li>Cybersecurity Basics</li>
+                <li>Academic Integrity</li>
+                <li>Time & Goal Management</li>
+                <li>Resource Evaluation</li>
+                <li>Effective Study Methods</li>
+            </ul>
+        </div>
     </div>
 
 </div>
