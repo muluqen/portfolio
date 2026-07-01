@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="trace" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.08"/>
+    </linearGradient>
+  </defs>
+  <g stroke="url(#trace)" stroke-width="1.5" fill="none">
+    <!-- Horizontal traces -->
+    <path d="M0 50 H80 L100 70 H160"/>
+    <path d="M200 30 H280 L300 50 H400"/>
+    <path d="M0 150 H60 L80 130 H200"/>
+    <path d="M240 170 H320 L340 150 H400"/>
+    <path d="M0 250 H100 L120 230 H180"/>
+    <path d="M300 260 H360 L380 280 H400"/>
+    <path d="M0 350 H40 L60 370 H140"/>
+    <path d="M260 340 H340 L360 360 H400"/>
+    <!-- Vertical traces -->
+    <path d="M50 0 V60 L70 80 V160"/>
+    <path d="M150 0 V40 L170 60 V120"/>
+    <path d="M350 0 V80 L330 100 V200"/>
+    <path d="M100 200 V260 L120 280 V340"/>
+    <path d="M250 180 V240 L270 260 V400"/>
+    <path d="M180 300 V360 L200 380 V400"/>
+    <!-- Cross connections -->
+    <path d="M80 80 L120 120"/>
+    <path d="M300 100 L340 140"/>
+    <path d="M160 260 L200 300"/>
+    <path d="M320 300 L360 340"/>
+  </g>
+  <!-- Nodes -->
+  <g fill="#7c3aed" opacity="0.15">
+    <circle cx="80" cy="80" r="3"/>
+    <circle cx="160" cy="150" r="3"/>
+    <circle cx="300" cy="50" r="3"/>
+    <circle cx="120" cy="230" r="3"/>
+    <circle cx="340" cy="150" r="3"/>
+    <circle cx="200" cy="300" r="3"/>
+    <circle cx="60" cy="370" r="3"/>
+    <circle cx="360" cy="360" r="3"/>
+    <circle cx="170" cy="60" r="3"/>
+    <circle cx="330" cy="100" r="3"/>
+    <circle cx="120" cy="280" r="3"/>
+    <circle cx="270" cy="260" r="3"/>
+  </g>
+  <!-- Larger junction nodes -->
+  <g fill="#06b6d4" opacity="0.1">
+    <circle cx="100" cy="70" r="5"/>
+    <circle cx="300" cy="50" r="5"/>
+    <circle cx="80" cy="130" r="5"/>
+    <circle cx="340" cy="150" r="5"/>
+    <circle cx="120" cy="230" r="5"/>
+    <circle cx="360" cy="280" r="5"/>
+    <circle cx="60" cy="370" r="5"/>
+    <circle cx="360" cy="360" r="5"/>
+  </g>
+</svg>
