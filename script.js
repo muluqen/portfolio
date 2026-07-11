@@ -88,8 +88,8 @@ const commands = {
 <span class="purple">       \\_____/</span>        <span class="green">WM:</span> Hyprland
 <span class="purple">      /|     |\\</span>       <span class="green">Theme:</span> MulukenOS-Dark
 <span class="purple">     / |     | \\</span>      <span class="green">Terminal:</span> muluken-term
-<span class="purple">        |   |</span>         <span class="green">CPU:</span> AI-Assisted Dev
-<span class="purple">        |   |</span>         <span class="green">Skills:</span> Problem Solving
+<span class="purple">        |   |</span>         <span class="green">Degree:</span> BSc ECE (Great Distinction)
+<span class="purple">        |   |</span>         <span class="green">Skills:</span> AI-Assisted Dev
 <span class="muted">    MULUKEN OS v1.0</span>
 <span class="yellow">    Built with AI assistance</span>`,
 

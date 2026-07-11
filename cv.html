@@ -5,170 +5,262 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muluken Shiferaw — CV</title>
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: #f5f5f5;
-            color: #1a1a2e;
-            line-height: 1.6;
+            font-family: 'DM Sans', sans-serif;
+            background: #111827;
+            color: #f9fafb;
+            min-height: 100vh;
         }
 
-        .cv-page {
-            max-width: 800px;
-            margin: 40px auto;
-            background: white;
-            padding: 60px;
-            box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-        }
-
-        .cv-header {
+        .cv-wrapper {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            border-bottom: 3px solid #7c3aed;
-            padding-bottom: 24px;
+            min-height: 100vh;
+        }
+
+        /* LEFT SIDEBAR */
+        .sidebar {
+            width: 320px;
+            background: #030712;
+            padding: 48px 32px;
+            flex-shrink: 0;
+        }
+
+        .sidebar-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .sidebar-role {
+            font-size: 0.85rem;
+            color: #60a5fa;
+            font-weight: 500;
             margin-bottom: 32px;
         }
 
-        .cv-name {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #1a1a2e;
-        }
-
-        .cv-title {
-            font-size: 1rem;
-            color: #7c3aed;
-            font-weight: 600;
-            margin-top: 4px;
-        }
-
-        .cv-contact {
-            text-align: right;
-            font-size: 0.85rem;
-            color: #555;
-        }
-
-        .cv-contact p { margin-bottom: 4px; }
-        .cv-contact a { color: #7c3aed; text-decoration: none; }
-
-        .cv-section {
+        .sidebar-section {
             margin-bottom: 28px;
         }
 
-        .cv-section-title {
-            font-size: 0.8rem;
+        .sidebar-label {
+            font-size: 0.65rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #7c3aed;
-            border-bottom: 1px solid #e5e5e5;
-            padding-bottom: 8px;
+            letter-spacing: 2px;
+            color: #6b7280;
+            margin-bottom: 12px;
+        }
+
+        .sidebar-item {
+            font-size: 0.82rem;
+            color: #d1d5db;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .sidebar-item .icon {
+            color: #60a5fa;
+            width: 16px;
+            text-align: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .sidebar-item a {
+            color: #93c5fd;
+            text-decoration: none;
+        }
+
+        .sidebar-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            background: #1f2937;
+            border-radius: 4px;
+            color: #d1d5db;
+            margin: 0 6px 6px 0;
+        }
+
+        .sidebar-lang {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.82rem;
+            margin-bottom: 6px;
+        }
+
+        .sidebar-lang span:last-child {
+            color: #9ca3af;
+        }
+
+        /* RIGHT CONTENT */
+        .content {
+            flex: 1;
+            background: #ffffff;
+            color: #111827;
+            padding: 48px 48px;
+        }
+
+        .content-section {
+            margin-bottom: 36px;
+        }
+
+        .content-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #2563eb;
             margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e5e7eb;
         }
 
-        .cv-item {
-            margin-bottom: 18px;
+        .about-text {
+            font-size: 0.9rem;
+            color: #374151;
+            line-height: 1.8;
         }
 
-        .cv-item-header {
+        /* Education */
+        .edu-head {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
         }
 
-        .cv-item-title {
-            font-size: 1rem;
-            font-weight: 700;
-        }
-
-        .cv-item-date {
-            font-size: 0.8rem;
-            color: #888;
-            font-weight: 500;
-        }
-
-        .cv-item-subtitle {
-            font-size: 0.9rem;
-            color: #555;
-            font-weight: 500;
-        }
-
-        .cv-item p {
-            font-size: 0.88rem;
-            color: #444;
-            margin-top: 6px;
-        }
-
-        .cv-item ul {
-            margin-top: 6px;
-            padding-left: 20px;
-        }
-
-        .cv-item li {
-            font-size: 0.88rem;
-            color: #444;
-            margin-bottom: 4px;
-        }
-
-        .cv-skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-
-        .cv-skill-group h4 {
-            font-size: 0.85rem;
+        .edu-head h3 {
+            font-size: 0.95rem;
             font-weight: 600;
+        }
+
+        .edu-head .year {
+            font-size: 0.8rem;
+            color: #6b7280;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .edu-sub {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-bottom: 6px;
+        }
+
+        .edu-stats {
+            font-size: 0.85rem;
+            color: #374151;
+            margin-top: 4px;
+        }
+
+        .edu-note {
+            font-size: 0.83rem;
+            color: #2563eb;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        /* Experience */
+        .exp-item {
+            margin-bottom: 22px;
+        }
+
+        .exp-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .exp-top h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .exp-top .date {
+            font-size: 0.8rem;
+            color: #6b7280;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .exp-company {
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        .exp-loc {
+            font-size: 0.8rem;
+            color: #9ca3af;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .exp-item ul {
+            margin-top: 8px;
+            padding-left: 16px;
+        }
+
+        .exp-item li {
+            font-size: 0.88rem;
+            color: #374151;
+            margin-bottom: 5px;
+        }
+
+        /* Projects */
+        .proj-note {
+            font-size: 0.83rem;
+            color: #6b7280;
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+
+        .proj-item {
+            margin-bottom: 20px;
+        }
+
+        .proj-item h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .proj-item a {
+            font-size: 0.8rem;
+            color: #2563eb;
+            text-decoration: none;
+            font-family: 'Fira Code', monospace;
+        }
+
+        .proj-item ul {
+            margin-top: 6px;
+            padding-left: 16px;
+        }
+
+        .proj-item li {
+            font-size: 0.88rem;
+            color: #374151;
             margin-bottom: 4px;
         }
 
-        .cv-skill-group p {
-            font-size: 0.85rem;
-            color: #555;
+        /* Certs */
+        .cert-list {
+            list-style: none;
         }
 
-        .cv-stats {
-            display: flex;
-            gap: 24px;
-            margin-top: 8px;
+        .cert-list li {
+            font-size: 0.88rem;
+            color: #374151;
+            padding: 5px 0;
+            border-bottom: 1px solid #f3f4f6;
         }
 
-        .cv-stat {
-            font-size: 0.85rem;
-            color: #555;
-        }
-
-        .cv-stat strong {
-            color: #1a1a2e;
-        }
-
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-        }
-
-        .expertise-tag {
-            font-size: 0.85rem;
-            color: #444;
-            padding: 6px 12px;
-            background: #f8f8f8;
-            border-radius: 4px;
-        }
-
+        /* Print */
         @media print {
             body { background: white; }
-            .cv-page {
-                margin: 0;
-                box-shadow: none;
-                padding: 40px;
-            }
+            .cv-wrapper { display: block; }
+            .sidebar { width: 100%; background: #1f2937; padding: 24px; }
+            .content { padding: 24px; }
             .no-print { display: none; }
         }
 
@@ -176,7 +268,7 @@
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background: #7c3aed;
+            background: #2563eb;
             color: white;
             border: none;
             padding: 14px 28px;
@@ -184,248 +276,156 @@
             font-size: 0.95rem;
             font-weight: 600;
             cursor: pointer;
-            box-shadow: 0 4px 20px rgba(124,58,237,0.4);
+            font-family: 'DM Sans', sans-serif;
             z-index: 100;
-            font-family: 'Inter', sans-serif;
         }
 
         .print-btn:hover {
-            background: #6d28d9;
+            background: #1d4ed8;
+        }
+
+        @media (max-width: 800px) {
+            .cv-wrapper { flex-direction: column; }
+            .sidebar { width: 100%; }
+            .content { padding: 32px 24px; }
         }
     </style>
 </head>
 <body>
 
-<button class="print-btn no-print" onclick="window.print()">⬇ Download as PDF</button>
+<button class="print-btn no-print" onclick="window.print()">Download as PDF</button>
 
-<div class="cv-page">
+<div class="cv-wrapper">
 
-    <!-- Header -->
-    <div class="cv-header">
-        <div>
-            <h1 class="cv-name">Muluken Shiferaw</h1>
-            <p class="cv-title">Electrical and Computer Engineer</p>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h1 class="sidebar-name">MULUKEN SHIFERAW</h1>
+        <p class="sidebar-role">Electrical and Computer Engineer</p>
+
+        <div class="sidebar-section">
+            <p class="sidebar-label">Contact</p>
+            <div class="sidebar-item"><span class="icon">&#9993;</span> mulukenshiferaw1221@gmail.com</div>
+            <div class="sidebar-item"><span class="icon">&#9742;</span> 0961012353</div>
+            <div class="sidebar-item"><span class="icon">&#9900;</span> @mulukenshiferaw</div>
+            <div class="sidebar-item"><span class="icon">&#9733;</span> <a href="https://github.com/muluqen" target="_blank">github.com/muluqen</a></div>
+            <div class="sidebar-item"><span class="icon">&#9733;</span> <a href="https://linkedin.com/in/muluken-shiferaw-696397238/" target="_blank">linkedin.com/in/muluken-shiferaw</a></div>
+            <div class="sidebar-item"><span class="icon">&#9733;</span> <a href="https://portfolio.mulukenshiferaw.workers.dev" target="_blank">portfolio.mulukenshiferaw.workers.dev</a></div>
+            <div class="sidebar-item"><span class="icon">&#9873;</span> Addis Ababa, Ethiopia</div>
         </div>
-        <div class="cv-contact">
-            <p>mulukenshiferaw1221@gmail.com</p>
-            <p>0961012353</p>
-            <p>@mulukenshiferaw (Telegram)</p>
-            <p>github.com/muluqen</p>
-            <p>linkedin.com/in/muluken-shiferaw</p>
-            <p>portfolio.mulukenshiferaw.workers.dev</p>
-            <p>Addis Ababa, Ethiopia</p>
+
+        <div class="sidebar-section">
+            <p class="sidebar-label">Expertise</p>
+            <div><span class="sidebar-tag">Problem Identification & Solution Design</span></div>
+            <div><span class="sidebar-tag">IT Support & Troubleshooting</span></div>
+            <div><span class="sidebar-tag">AI-Assisted Development</span></div>
+            <div><span class="sidebar-tag">Testing & Quality Verification</span></div>
+            <div><span class="sidebar-tag">Cross-Team Collaboration</span></div>
+            <div><span class="sidebar-tag">Fast Learner / Adaptability</span></div>
         </div>
-    </div>
 
-    <!-- About -->
-    <div class="cv-section">
-        <h2 class="cv-section-title">About</h2>
-        <p style="font-size: 0.9rem; color: #444;">
-            Computer Engineering graduate with strong problem-solving skills and a passion for learning. 
-            Developed multiple web projects including a tutoring platform, cafe management system (graduation project), 
-            and repair tracking tool using AI-assisted development (Claude, ChatGPT, GitHub Copilot, Codex, Antigravity, OpenCode). 
-            Focused on understanding systems architecture, requirements gathering, and delivering functional solutions.
-        </p>
-    </div>
+        <div class="sidebar-section">
+            <p class="sidebar-label">Languages</p>
+            <div class="sidebar-lang"><span>Amharic</span><span>Native</span></div>
+            <div class="sidebar-lang"><span>English</span><span>Professional</span></div>
+        </div>
+    </aside>
 
-    <!-- Education -->
-    <div class="cv-section">
-        <h2 class="cv-section-title">Education</h2>
-        <div class="cv-item">
-            <div class="cv-item-header">
-                <div>
-                    <h3 class="cv-item-title">BSc in Electrical and Computer Engineering</h3>
-                    <p class="cv-item-subtitle">Addis Ababa Science and Technology University (AASTU)</p>
+    <!-- CONTENT -->
+    <main class="content">
+
+        <div class="content-section">
+            <h2 class="content-label">About</h2>
+            <p class="about-text">Electrical and Computer Engineering graduate with hands-on experience across IT support, network infrastructure, and AI-assisted software development. Skilled at identifying real operational problems and directing modern AI tools to design, build, test, and deploy working solutions. Comfortable across technical support environments and product-focused development, with a strong focus on practical problem-solving over theory.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="content-label">Education</h2>
+            <div class="edu-head">
+                <h3>BSc in Electrical and Computer Engineering</h3>
+                <span class="year">2022 - 2026</span>
+            </div>
+            <p class="edu-sub">Addis Ababa Science and Technology University (AASTU)</p>
+            <p class="edu-stats"><strong>CGPA:</strong> 3.51 / 4.0 &nbsp;|&nbsp; <strong>National Exit Exam:</strong> 77.5%</p>
+            <p class="edu-note">Graduated with Great Distinction</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="content-label">Experience</h2>
+
+            <div class="exp-item">
+                <div class="exp-top">
+                    <h3>Software Development Intern</h3>
+                    <span class="date">2024</span>
                 </div>
-                <span class="cv-item-date">2021 — 2026</span>
+                <p class="exp-company">ITDB (Information Technology Development Bureau)</p>
+                <p class="exp-loc">Addis Ababa</p>
+                <ul>
+                    <li>Contributed to real product team projects using AI-assisted development tools</li>
+                    <li>Wired frontend components to backend APIs, resolved database issues</li>
+                    <li>Project was later adopted and deployed by an acquiring company</li>
+                </ul>
             </div>
-            <div class="cv-stats">
-                <span class="cv-stat"><strong>CGPA:</strong> 3.51 / 4.0</span>
-                <span class="cv-stat"><strong>National Exit Exam:</strong> 77.5%</span>
-            </div>
-            <p style="font-size: 0.85rem; color: #666; margin-top: 6px;">
-                Graduated with Great Distinction
-            </p>
-        </div>
-    </div>
 
-    <!-- Experience -->
-    <div class="cv-section">
-        <h2 class="cv-section-title">Experience</h2>
-        <div class="cv-item">
-            <div class="cv-item-header">
-                <div>
-                    <h3 class="cv-item-title">Software Development Intern</h3>
-                    <p class="cv-item-subtitle">ITDB (Information Technology Development Bureau)</p>
+            <div class="exp-item">
+                <div class="exp-top">
+                    <h3>IT Support & Network Intern</h3>
+                    <span class="date">2024</span>
                 </div>
-                <span class="cv-item-date">2024</span>
-            </div>
-            <p class="cv-item-location">Addis Ababa</p>
-            <ul>
-                <li>Backend development on a real product team — actual features shipping.</li>
-                <li>Wired frontend components to the API, sorted out database issues.</li>
-                <li>Learned what it means to write code other people have to maintain.</li>
-            </ul>
-        </div>
-
-        <div class="cv-item">
-            <div class="cv-item-header">
-                <div>
-                    <h3 class="cv-item-title">Network Engineering Intern</h3>
-                    <p class="cv-item-subtitle">CBE (Commercial Bank of Ethiopia)</p>
-                </div>
-                <span class="cv-item-date">2024</span>
-            </div>
-            <p class="cv-item-location">Addis Ababa</p>
-            <ul>
-                <li>Configured IP addresses, routing and switching across bank branches — hands-on.</li>
-                <li>Troubleshot real connectivity problems on a live network.</li>
-                <li>Got clear picture of how large-scale infrastructure runs day-to-day.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Skills -->
-    <div class="cv-section">
-        <h2 class="cv-section-title">Technical Skills</h2>
-        <div class="cv-skills-grid">
-            <div class="cv-skill-group">
-                <h4>Tools I Use</h4>
-                <p>Git, GitHub, Linux, Postman, VS Code</p>
-            </div>
-            <div class="cv-skill-group">
-                <h4>AI-Assisted Development</h4>
-                <p>Claude, ChatGPT, GitHub Copilot, Codex, Antigravity, OpenCode</p>
-            </div>
-            <div class="cv-skill-group">
-                <h4>Engineering Skills</h4>
-                <p>Problem Solving, System Design, Testing & Debugging</p>
-            </div>
-            <div class="cv-skill-group">
-                <h4>Soft Skills</h4>
-                <p>Critical Thinking, Fast Learner, Team Work, Adaptability</p>
-            </div>
-            <div class="cv-skill-group">
-                <h4>Exposure To (Via AI Projects)</h4>
-                <p>PHP, Laravel, Vue.js, JavaScript, PostgreSQL, MySQL, Flutter</p>
+                <p class="exp-company">CBE (Commercial Bank of Ethiopia)</p>
+                <p class="exp-loc">Addis Ababa</p>
+                <ul>
+                    <li>Configured IP addresses, routing, and switching; troubleshot live connectivity issues across bank branches</li>
+                    <li>Identified a recurring inefficiency: new IT staff had no way to learn common branch issues except by trial and error, and small recurring problems (e.g. printer sharing, IP fixes) always required IT team dispatch</li>
+                    <li>Designed a self-service knowledge base concept to solve this (see FixFlow project below)</li>
+                </ul>
             </div>
         </div>
-    </div>
 
-    <!-- Expertise -->
-    <div class="cv-section">
-        <h2 class="cv-section-title">Expertise</h2>
-        <div class="expertise-grid">
-            <span class="expertise-tag">Team Work</span>
-            <span class="expertise-tag">Adaptability</span>
-            <span class="expertise-tag">Critical Thinking</span>
-            <span class="expertise-tag">Problem Solving</span>
-            <span class="expertise-tag">Fast Learner</span>
-            <span class="expertise-tag">Attention to Detail</span>
-        </div>
-    </div>
+        <div class="content-section">
+            <h2 class="content-label">Projects</h2>
+            <p class="proj-note">Built using AI-assisted development. I handle concept, architecture decisions, testing, and deployment; AI tools generate the implementation code.</p>
 
-    <!-- Projects -->
-    <div class="cv-section">
-        <h2 class="cv-section-title">Projects</h2>
-
-        <div class="cv-item">
-            <div class="cv-item-header">
-                <div>
-                    <h3 class="cv-item-title">TAVLIQ — Smart Digital Ordering System (Graduation Project)</h3>
-                    <p class="cv-item-subtitle">Team of 4 | Advisor: Mr. Esubalew | June 2026</p>
-                </div>
+            <div class="proj-item">
+                <h3>FixFlow: IT Knowledge Base & Repair Tracking System</h3>
+                <ul>
+                    <li>Personally identified the problem during CBE internship and designed the solution</li>
+                    <li>Self-service knowledge base so branch staff and new IT hires can resolve and learn common issues without waiting for support dispatch</li>
+                    <li>Tested internally; most-starred repo on my GitHub</li>
+                </ul>
             </div>
-            <p style="font-size: 0.85rem; color: #7c3aed; margin-top: 4px;">Vue.js 3, Laravel 13, PostgreSQL, Laravel Reverb, Sanctum</p>
-            <p style="font-size: 0.85rem; color: #555; margin-top: 4px;"><strong>Role:</strong> Concept creator, database architect, system designer, full-stack developer</p>
-            <ul>
-                <li>Designed and built a web-based cafe management and POS system addressing 4 real problems in Ethiopian food service.</li>
-                <li>Interactive menu customization with real-time client-side price recalculation.</li>
-                <li>Kitchen Display System with automatic station routing (food → kitchen, beverages → barista) via WebSockets.</li>
-                <li>Recipe-based inventory deduction engine using atomic database transactions — 100% accuracy in testing.</li>
-                <li>Dynamic RBAC permission matrix dashboard with dual-layer enforcement (frontend + API).</li>
-                <li>Multi-restaurant support under single deployment. System rated 4.09/5 by users.</li>
-                <li>Database design (15 entities, 3NF), full-stack development using AI tools (OpenCode, Ollama).</li>
-            </ul>
-        </div>
 
-        <div class="cv-item">
-            <div class="cv-item-header">
-                <h3 class="cv-item-title">Tutinium — Tutoring Platform</h3>
+            <div class="proj-item">
+                <h3>Weather Dashboard <a href="https://weather-clock-signal.vercel.app/" target="_blank">weather-clock-signal.vercel.app/</a></h3>
+                <ul>
+                    <li>Interactive analog SVG clock doubling as a 24-hour weather timeline</li>
+                    <li>Real-time hourly weather via Open-Meteo API, city search with autocomplete, geolocation</li>
+                    <li>Outfit and activity recommendation engine based on temperature, rain, and wind</li>
+                    <li>Animated weather particles and sun-position tracking; deployed on Vercel</li>
+                </ul>
             </div>
-            <p style="font-size: 0.85rem; color: #7c3aed; margin-top: 4px;">Laravel 13, PHP, PostgreSQL, Laravel Sanctum</p>
-            <ul>
-                <li>Connects tutors and parents — bookings, payments, messaging, reviews.</li>
-                <li>Full REST API with PostgreSQL and Sanctum auth.</li>
-                <li>Developed using AI tools (Claude, ChatGPT) for code generation and debugging.</li>
-            </ul>
-        </div>
 
-        <div class="cv-item">
-            <div class="cv-item-header">
-                <h3 class="cv-item-title">FixFlow CBE — Repair Management System</h3>
+            <div class="proj-item">
+                <h3>Crown & Chaos <a href="https://zemene-mesafint.vercel.app/" target="_blank">zemene-mesafint.vercel.app/</a></h3>
+                <ul>
+                    <li>React app documenting Ethiopia's Zemene Mesafint era (1769-1855)</li>
+                    <li>Interactive "investigation board" with 35 historical figures, dossier modals, family tree, timeline, and full-text search</li>
+                    <li>Built with React, Vite, and Tailwind CSS; deployed via GitHub Pages</li>
+                </ul>
             </div>
-            <p style="font-size: 0.85rem; color: #7c3aed; margin-top: 4px;">Laravel, Blade</p>
-            <ul>
-                <li>Tracks repair jobs and workflows. Most starred repo on GitHub.</li>
-                <li>AI-assisted development for rapid implementation.</li>
-            </ul>
-        </div>
 
-        <div class="cv-item">
-            <div class="cv-item-header">
-                <div>
-                    <h3 class="cv-item-title">Weather Clock — Real-Time Weather Dashboard</h3>
-                    <p><a href="https://weather-clock-signal.vercel.app/" target="_blank" style="color: #7c3aed; font-size: 0.85rem;">weather-clock-signal.vercel.app</a></p>
-                </div>
-            </div>
-            <p style="font-size: 0.85rem; color: #7c3aed; margin-top: 4px;">Vanilla HTML/CSS/JS, Open-Meteo API (free, no API key)</p>
-            <ul>
-                <li>Real-time weather dashboard with an analog clock showing 24-hour forecasts, temperature-colored dots, and a live clock hand.</li>
-                <li>Animated weather particles (rain, wind) scaled to actual conditions. Sun arc tracking sunrise to sunset.</li>
-                <li>City search with autocomplete, geolocation button, and historical weather data back to 1940.</li>
-                <li>Outfit suggestions based on temperature, activity badges (hiking, cycling, etc.), and rotating daily weather facts.</li>
-                <li>Fully responsive design, works on mobile. No API key required — uses Open-Meteo's free tier.</li>
-            </ul>
-        </div>
-
-        <div class="cv-item">
-            <div class="cv-item-header">
-                <div>
-                    <h3 class="cv-item-title">Crown & Chaos — Ethiopian Historical Investigation Board</h3>
-                    <p><a href="https://zemene-mesafint.vercel.app/" target="_blank" style="color: #7c3aed; font-size: 0.85rem;">zemene-mesafint.vercel.app</a></p>
-                </div>
-            </div>
-            <p style="font-size: 0.85rem; color: #7c3aed; margin-top: 4px;">React, Vite, Tailwind CSS</p>
-            <ul>
-                <li>Interactive investigation board documenting Ethiopia's Zemene Mesafint (Era of the Princes, c. 1769–1855).</li>
-                <li>Timeline visualization, case files for each emperor, family tree connections, and interactive maps.</li>
-                <li>Searchable database of historical figures with detailed dossiers and facts.</li>
-                <li>Designed for students and researchers studying Ethiopian history.</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Languages -->
-    <div class="cv-section">
-        <h2 class="cv-section-title">Languages</h2>
-        <div class="cv-skills-grid">
-            <div class="cv-skill-group">
-                <h4>Amharic</h4>
-                <p>Native</p>
-            </div>
-            <div class="cv-skill-group">
-                <h4>English</h4>
-                <p>Professional</p>
+            <div class="proj-item">
+                <h3>Task Manager <a href="https://to-do-list-via.vercel.app/" target="_blank">to-do-list-via.vercel.app/</a></h3>
+                <ul>
+                    <li>Task management app with subtasks, categories, drag-and-drop reordering, and a separate notes/brain-dump module</li>
+                    <li>Dark/light theming, smart filtering and sorting, completion animations</li>
+                    <li>No external dependencies; built with vanilla HTML, CSS, and JavaScript</li>
+                </ul>
             </div>
         </div>
-    </div>
 
-    <!-- Certificates -->
-    <div class="cv-section">
-        <h2 class="cv-section-title">Certificates</h2>
-        <div class="cv-item">
-            <ul>
+        <div class="content-section">
+            <h2 class="content-label">Certificates</h2>
+            <ul class="cert-list">
                 <li>Data Analysis — 5 Million Coders Initiative</li>
                 <li>e-SHE Digital Suite — Ministry of Education, Ethiopia</li>
                 <li>Online Learning Strategies</li>
@@ -436,7 +436,8 @@
                 <li>Effective Study Methods</li>
             </ul>
         </div>
-    </div>
+
+    </main>
 
 </div>
 
