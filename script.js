@@ -140,9 +140,32 @@ terminalInput.addEventListener('keydown', (e) => {
     }
 });
 
+// TERMINAL WELCOME BANNER
+function terminalWelcome() {
+    const lastLogin = new Date().toLocaleString('en-US', {
+        weekday: 'short', month: 'short', day: 'numeric',
+        hour: '2-digit', minute: '2-digit', hour12: false
+    });
+
+    terminalOutput.innerHTML += `
+<p><span class="purple"> __  __ _       _     _____                         _</span></p>
+<p><span class="purple">|  \\/  (_)_ __ (_)_ __|  ___|__  _   _ _ __ ___  __ _| |</span></p>
+<p><span class="purple">| |\\/| | | '_ \\| | '__| |_ / _ \\| | | | '__/ _ \\/ _\` | |</span></p>
+<p><span class="purple">| |  | | | | | | | |__|  _| (_) | |_| | | |  __/ (_| | |</span></p>
+<p><span class="purple">|_|  |_|_|_| |_|_|_|  |_|  \\___/ \\__,_|_|  \\___|\\__,_|_|</span>  <span class="muted">v1.0</span></p>
+<p><span class="muted">Last login: ${lastLogin} on tty1</span></p>
+<p><span class="green">Welcome, visitor!</span> You're browsing <span class="cyan">Muluken Shiferaw</span>'s portfolio — a Linux-style desktop in your browser.</p>
+<p><span class="muted">Type</span> <span class="cyan">help</span> <span class="muted">to list all commands. Quick start:</span></p>
+<p><span class="cyan">  about</span> <span class="muted">·</span> <span class="cyan">projects</span> <span class="muted">·</span> <span class="cyan">skills</span> <span class="muted">·</span> <span class="cyan">experience</span> <span class="muted">·</span> <span class="cyan">certs</span> <span class="muted">·</span> <span class="cyan">contact</span> <span class="muted">·</span> <span class="cyan">cv</span></p>
+<p><span class="cyan">  neofetch</span> <span class="muted">·</span> <span class="cyan">ls</span> <span class="muted">·</span> <span class="cyan">whoami</span></p>
+<p><span class="muted">Tip: windows are draggable, and the dock at the bottom opens apps too.</span></p>`;
+    terminalBody.scrollTop = terminalBody.scrollHeight;
+}
+
 // OPEN TERMINAL ON LOAD
 setTimeout(() => {
     openApp('terminal');
+    terminalWelcome();
     terminalInput.focus();
 }, 2200);
 

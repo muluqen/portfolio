@@ -359,6 +359,7 @@ body {
 .terminal-output .purple { color: var(--accent); }
 .terminal-output .yellow { color: var(--yellow); }
 .terminal-output .muted { color: var(--muted); }
+.terminal-output .red { color: var(--red, #f87171); }
 
 .terminal-input-line {
     display: flex;
