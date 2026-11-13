@@ -1,0 +1,10 @@
+# Cloudflare Worker configuration for the portfolio site
+# Static assets only — the whole repo root is served as the site.
+# .assetsignore excludes .git, node_modules and .wrangler from upload.
+
+name = "portfolio"
+compatibility_date = "2026-07-11"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "."
